@@ -28,8 +28,8 @@ class LinearRegression:
     def predict(self, x_: np.array) -> np.array:
         return (x_.dot(self.weights) + self.bias).flatten()
 
-    def _loss_mse(self, y_train: np.array, y_predicted: np.array) -> np.array:
-        return np.mean((y_train - y_predicted) ** 2)
+    def _loss_mse(self, y_true: np.array, y_predicted: np.array) -> np.array:
+        return np.mean((y_true - y_predicted) ** 2)
 
     def fit(self, x_train: np.array, y_train: np.array):
         """
