@@ -14,11 +14,12 @@ class LinearRegression:
 
         Args:
             n_features(int): number of features
+            n_samples(int): number of samples
             learning_rate (float): The step size for updating weights and bias during gradient descent.
                                    A smaller learning rate requires more iterations but can prevent overshooting.
-            iterations (int): The number of times to iterate through the training data to update the weights and bias.
+            n_iterations (int): The number of times to iterate through the training data to update the weights and bias.
         """
-        self.weights = np.ones(shape=(n_features, 1))
+        self.weights = np.zeros(shape=(n_features, 1))
         self.bias = -5
         self.learning_rate = learning_rate
         self.n_iteration = n_iteration
